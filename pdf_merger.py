@@ -9,8 +9,7 @@ def Merge_pdfs(pdf_files):
 
     # To merge all the files together
     for file in pdf_files:
-        if file.endswith(".pdf"):
-            merger.append(file)
+        merger.append(file)
         print("Files Merged Successfully")
             
     merger.write("combined.pdf")
