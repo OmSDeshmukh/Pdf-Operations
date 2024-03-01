@@ -1,6 +1,7 @@
 from docx2pdf import convert
-import os
 import tempfile
+
+import os
 
 def doc_to_pdf(docx_file):
     with tempfile.NamedTemporaryFile(delete=False,suffix='.docx') as temp_file:
