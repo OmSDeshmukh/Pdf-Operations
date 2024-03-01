@@ -2,7 +2,10 @@ import streamlit as st
 from pdf_merger import Merge_pdfs
 import os
 from pdf_to_doc import pdf_to_doc
-
+from doc_to_pdf import doc_to_pdf
+# Get the directory of the current script
+# script_directory = os.path.dirname(os.path.abspath(__file__))
+# print(script_directory)
 st.title("PDF Operations")
 
 option = st.radio("Select an option:", ("Merge PDF files", "Convert PDF to DOC"))
@@ -47,3 +50,24 @@ elif option == "Convert PDF to DOC":
                 st.error(f"Failed to convert PDF to DOC: {str(e)}")
         else:
             st.warning("Please upload a PDF file to convert.")
+            
+            
+# elif option == "Convert DOC to PDF":
+#     st.title("Convert  DOC to PDF")
+#     uploaded_file = st.file_uploader("Upload PDF file", type=['docx'], accept_multiple_files=False)
+
+#     if st.button("Convert PDF to DOC"):
+#         if uploaded_file:
+#             try:
+#                 docx_bytes = doc_to_pdf(uploaded_file)
+#                 st.success("DOC converted to PDF successfully!")
+#                 st.download_button(
+#                     label="Click here to download the pdf",
+#                     data=docx_bytes,
+#                     file_name="converted_to_pdf.pdf",
+#                     mime="docx"
+#                 )
+#             except Exception as e:
+#                 st.error(f"Failed to convert DOC to PDF: {str(e)}")
+#         else:
+#             st.warning("Please upload a DOC file to convert.")
