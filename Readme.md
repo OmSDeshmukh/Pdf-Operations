@@ -7,12 +7,13 @@
 - Upload the PDF files you want to merge or convert 
 - Once, they are converted, you can download it back by clicking the download button
 
-## Libraries Used
+## Python Libraries Used
 The set of python libraries used include the following
 - PyPDF2(for merging the PDF)
 - pdf2docx(for converting PDF to DOCX)
 - docx2pdf(for converting DOCX to PDF)(in progress)
 - tempfile(to store the uploaded files into a temporary directories)
+- streamlit(for UI)
 
 ## Installation
 1.Clone this repository to your local machine using:
