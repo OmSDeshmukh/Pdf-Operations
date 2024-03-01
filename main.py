@@ -1,11 +1,16 @@
 import streamlit as st
-from pdf_merger import Merge_pdfs
+
 import os
-from pdf_to_doc import pdf_to_doc
+
 from doc_to_pdf import doc_to_pdf
+from pdf_merger import Merge_pdfs
+from pdf_to_doc import pdf_to_doc
+
+
 # Get the directory of the current script
 # script_directory = os.path.dirname(os.path.abspath(__file__))
 # print(script_directory)
+
 st.title("PDF Operations")
 
 option = st.radio("Select an option:", ("Merge PDF files", "Convert PDF to DOC"))
